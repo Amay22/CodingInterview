@@ -1,8 +1,8 @@
 package Trees;
 
-public class CreateMinimalBST {
+class CreateMinimalBST {
 
-    public static TreeNode createBST(int arr[], int start, int end) {
+    static TreeNode createBST(int arr[], int start, int end) {
         if (end < start) {
             return null;
         }

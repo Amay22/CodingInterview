@@ -1,8 +1,10 @@
 package Trees;
 
-public class CheckMirrors {
+// Check if the tree is symmetrical or not.
 
-    public static boolean areMirrors(TreeNode root1, TreeNode root2) {
+public class SymmetricalTree {
+
+    private static boolean areMirrors(TreeNode root1, TreeNode root2) {
         if (root1 == null && root2 == null) {
             return true;
         }
@@ -25,5 +27,4 @@ public class CheckMirrors {
         System.out.println(areMirrors(tree1, tree2));
 
     }
-
 }

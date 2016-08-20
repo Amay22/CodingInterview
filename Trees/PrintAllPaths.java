@@ -37,6 +37,5 @@ public class PrintAllPaths {
         tree.left.right = node2;
         tree.right.right = node3;
         printPaths(tree);
-        
     }
 }

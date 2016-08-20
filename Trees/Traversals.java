@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Traversals {
 
-    public static ArrayList<Integer> preorderTraversal(TreeNode root) {
+    static ArrayList<Integer> preorderTraversal(TreeNode root) {
         ArrayList<Integer> returnList = new ArrayList<>();
         if (root == null) {
             return returnList;
@@ -28,24 +28,24 @@ public class Traversals {
     }
 
     public static ArrayList<Integer> inorderTraversal(TreeNode root) {
-// IMPORTANT: Please reset any member data you declared, as
+        // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> lst = new ArrayList<>();
         if (root == null) {
             return lst;
         }
         Stack<TreeNode> stack = new Stack<>();
-//define a pointer to track nodes
+        //define a pointer to track nodes
         TreeNode p = root;
         while (!stack.empty() || p != null) {
-// if it is not null, push to stack
-//and go down the tree to left
+            // if it is not null, push to stack
+            //and go down the tree to left
             if (p != null) {
                 stack.push(p);
                 p = p.left;
-// if no left child
-// pop stack, process the node
-// then let p point to the right
+                // if no left child
+                // pop stack, process the node
+                // then let p point to the right
             } else {
                 TreeNode t = stack.pop();
                 lst.add(t.val);
@@ -101,7 +101,7 @@ public class Traversals {
         return lst;
     }
 
-    public static ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
+    static ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
         ArrayList<ArrayList<Integer>> al = new ArrayList<>();        
         if (root == null) { return al; }
         ArrayList<Integer> nodeValues = new ArrayList<>();
@@ -117,7 +117,7 @@ public class Traversals {
                 current = next;
                 next = new LinkedList<>();
                 al.add(nodeValues);
-                nodeValues = new ArrayList();
+                nodeValues = new ArrayList<>();
             }
         }
         return al;
