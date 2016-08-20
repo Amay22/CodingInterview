@@ -15,7 +15,7 @@ public class LCS {
 
     public static int longestConsecutive(int[] num) {
         // if array is empty, return 0
-        if (num.length == 0) {x
+        if (num.length == 0) {
             return 0;
         }
         Set<Integer> set = new HashSet<>();
