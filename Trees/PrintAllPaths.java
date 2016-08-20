@@ -2,7 +2,7 @@ package Trees;
 
 public class PrintAllPaths {
 
-    public static void printPaths(TreeNode root) {
+    private static void printPaths(TreeNode root) {
         int[] path = new int[256];
         printPaths(root, path, 0);
     }

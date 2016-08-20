@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class HistogramLargestArea {
 
-    public static int largestRectangleArea(int[] height) {
+    private static int largestRectangleArea(int[] height) {
         if (height == null || height.length == 0) {
             return 0;
         }
@@ -33,7 +33,7 @@ public class HistogramLargestArea {
         return max;
     }
     
-    public static int maxArea(int[] height) {
+    private static int maxArea(int[] height) {
         if (height == null) {
             return 0;
         }
@@ -48,8 +48,8 @@ public class HistogramLargestArea {
                 right--;
             }
         }
-        for (int i = 0; i < height.length; ++i) {
-            max =  Math.max(max, height[i]);
+        for (int aHeight : height) {
+            max = Math.max(max, aHeight);
         }
         return max;
     }

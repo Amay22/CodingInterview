@@ -6,7 +6,7 @@ package ArrayInterview;
 
 public class MergeSortedArr {
 
-    public static int[] merge(int A[], int B[]) {
+    private static int[] merge(int A[], int B[]) {
         int i = A.length - 1;
         int j = B.length - 1;
         int k = i + j + 1;        
@@ -25,9 +25,8 @@ public class MergeSortedArr {
         int arr1[] = {5, 34, 78, 222, 345, 999, 1023};
         int arr2[] = {2, 3, 79, 200, 220, 1000, 1111};
         int result[] = merge(arr1, arr2);
-        for (int i = 0; i < result.length; ++i) {
-            System.out.print(result[i] + ",");
+        for (int aResult : result) {
+            System.out.print(aResult + ",");
         }
     }
-
 }
