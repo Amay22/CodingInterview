@@ -4,7 +4,7 @@ package ArrayInterview;
 // Complexity: O(n)
 // Array arr =  [1,2,3,4,5,6]
 // Solution done by dividing and diving and reversing the two parts
-// ALGROTHM
+// ALGORITHM
 //1. Divide the array two parts: 1,2,3,4 and 5, 6
 //2. Rotate first part: 4,3,2,1,5,6
 //3. Rotate second part: 4,3,2,1,6,5
@@ -12,7 +12,7 @@ package ArrayInterview;
 
 public class RotateArr {
 
-    public static int[] rotateArr(int[] arr, int order) {
+    private static int[] rotateArr(int[] arr, int order) {
         if (arr == null || order < 0) {
             throw new IllegalArgumentException("Illegal argument!");
         }
@@ -25,7 +25,7 @@ public class RotateArr {
         return arr;
     }
 
-    public static void reverseArr(int[] arr, int left, int right) {
+    private static void reverseArr(int[] arr, int left, int right) {
         while (left < right) {
             int temp = arr[left];
             arr[left++] = arr[right];

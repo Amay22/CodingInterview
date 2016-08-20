@@ -1,17 +1,20 @@
 package Stacks;
 
+// Reverse Polish Notation. Evaluate Postfix Notation.
+
 import java.util.Stack;
 
 public class RPN {
 
-    public static int rpn(String[] tokens) {
-        int returnValue = 0;
+    private static int rpn(String[] tokens) {
         String operators = "+-*/";
         Stack<String> stack = new Stack<>();
         for (String t : tokens) {
-            if (!operators.contains(t)) { //push to stack if it is a number
+            if (!operators.contains(t)) {
+                //push to stack if it is a number
                 stack.push(t);
-            } else {//pop numbers from stack if it is an operator
+            } else {
+                //pop numbers from stack if it is an operator
                 int a = Integer.valueOf(stack.pop());
                 int b = Integer.valueOf(stack.pop());
                 switch (t) {
@@ -30,8 +33,7 @@ public class RPN {
                 }
             }
         }
-        returnValue = Integer.valueOf(stack.pop());
-        return returnValue;
+        return Integer.valueOf(stack.pop());
     }
 
     public static void main(String[] args){

@@ -1,9 +1,12 @@
 package Strings;
 
+//Implement regular expression matching with support for '.' and '*'.
+// '.' Matches any single character.
+// '*' Matches zero or more of the preceding element.
 
 public class RegExMatch {
 
-    public static boolean isMatch(String s, String p) {
+    private static boolean isMatch(String s, String p) {
         if (p.length() == 0) {
             return s.length() == 0;
         }
@@ -41,8 +44,6 @@ public class RegExMatch {
     }
 
     public static void main(String[] args) {
-        String one = "*";
-        String two = "aa";
-        System.out.println(isMatch(one, two));
+        System.out.println(isMatch("aa",".*") );
     }
 }

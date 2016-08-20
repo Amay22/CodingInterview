@@ -1,6 +1,9 @@
 # IDE Files
 
 .idea/*
+CodingInterview.iml
+out/*
+
 
 # Compiled Files
 

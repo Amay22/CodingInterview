@@ -1,10 +1,12 @@
 package Hard;
 
+// largest number that can be formed by concatenation all the numbers in an array.
+
 import java.util.Arrays;
 
 public class LargestNumber {
 
-    public static String largestNumber(int[] num) {
+    private static String largestNumber(int[] num) {
         String[] NUM = new String[num.length];
         for (int i = 0; i < num.length; i++) {
             NUM[i] = String.valueOf(num[i]);

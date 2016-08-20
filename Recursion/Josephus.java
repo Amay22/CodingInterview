@@ -1,8 +1,10 @@
 package Recursion;
 
+// N bottles in circle. We count and remove the 1st then the 2nd bottle consecutively
+// which bottle remains in the end ?
 public class Josephus {
 
-    public static int josephus(int n, int k) {
+    private static int josephus(int n, int k) {
         if (n == 1) {
             return 1;
         } else{

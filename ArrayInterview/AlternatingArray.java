@@ -9,7 +9,7 @@ package ArrayInterview;
 
 public class AlternatingArray {
 
-    public static int[] alternate_unsorted(int arr[]) {
+    private static int[] alternate_unsorted(int arr[]) {
         for (int i = 0; i < arr.length - 1; ++i) {
             if (i % 2 == 0 && arr[i] > arr[i + 1]) {
                 swap(arr, i, i + 1);
@@ -20,7 +20,7 @@ public class AlternatingArray {
         return arr;
     }
 
-    public static void swap(int arr[], int i, int j) {
+    private static void swap(int arr[], int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
@@ -29,8 +29,8 @@ public class AlternatingArray {
     public static void main(String[] args) {
         int arr[] = {25, 1, 2, 3, 3, 49, 54, 32, 67, 22, 13};
         int result[] = alternate_unsorted(arr);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + ", ");
+        for (int aResult : result) {
+            System.out.print(aResult + ", ");
         }
     }
 }

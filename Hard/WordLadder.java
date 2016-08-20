@@ -1,12 +1,22 @@
 package Hard;
 
+// Given two words (start and end), and a dictionary, find the length of shortest
+// transformation sequence from start to end, such that only one letter can be changed
+// at a time and each intermediate word must exist in the dictionary. For example, given:
+// INPUT:
+// start = "hit"
+// end = "cog"
+// dict = ["hot","dot","dog","lot","log"]
+// OUTPUT: 5
+// Explanation: "hit" -> "hot" -> "dot" -> "dog" -> "cog"
+// BFS PROBLEM
 
 import java.util.HashSet;
 import java.util.LinkedList;
 
 public class WordLadder {
 
-    public static int ladderLength(String start, String end, HashSet<String> dict) {
+    private static int ladderLength(String start, String end, HashSet<String> dict) {
         if (dict.isEmpty()) {
             return 0;
         }

@@ -4,7 +4,7 @@ package Strings;
 // Complexity: O(2n) i.e. n is length of string
 // Space Complexity is higher for hashmap.
 // Two strings are isomorphic if the characters in one can be replaced to get another.
-// eg. "egg" and "add" are Isomorphoic
+// eg. "egg" and "add" are Isomorphic
 // ALGORITHM:
 // Hashmap implementation map every character in 1st string to 2nd
 // If there'a  collision and key doesn't match the character then it's not isomorphic.
@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 public class IsomorphicStrings {
 
-    public static boolean isIsomorphic(String one, String two) {
+    private static boolean isIsomorphic(String one, String two) {
         if (one == null || two == null || one.length() != two.length()  ) {
             return false;
         }
@@ -35,9 +35,7 @@ public class IsomorphicStrings {
     }
     
     public static void main(String[] args) {
-        String one = "egg";
-        String two = "add";
-        boolean result = isIsomorphic(one, two) && isIsomorphic(two, one);
-        System.out.println(result);
+        System.out.println(isIsomorphic("egg", "add") && isIsomorphic("egg", "add"));
+        System.out.println(isIsomorphic("aba", "add") && isIsomorphic("aba", "add"));
     }
 }

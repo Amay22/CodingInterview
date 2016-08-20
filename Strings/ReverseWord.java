@@ -1,12 +1,14 @@
 package Strings;
 
+// Reverse every word in the string individually.
+
 public class ReverseWord {
 
-    public static String reverseWords(String s) {
+    private static String reverseWords(String s) {
         if (s == null || s.length() == 0) {
             return "";
         }
-// split to words by space
+        // split to words by space
         String[] arr = s.split(" ");
         StringBuilder sb = new StringBuilder();
         for (int i = arr.length - 1; i >= 0; --i) {
