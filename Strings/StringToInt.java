@@ -1,14 +1,14 @@
 package Strings;
 
-public class AtoI {
+public class StringToInt {
 
-    public static int atoi(String str) {
+    private static int atoi(String str) {
         if (str == null || str.length() < 1) {
             return 0;
         }
         str = str.trim();
         char flag = '+';
-// check negative or positive
+        // check negative or positive
         int i = 0;
         if (str.charAt(0) == '-') {
             flag = '-';
@@ -16,9 +16,9 @@ public class AtoI {
         } else if (str.charAt(0) == '+') {
             i++;
         }
-// use double to store result
+        // use double to store result
         double result = 0;
-// calculate value
+
         while (str.length() > i && str.charAt(i) >= '0' && str.charAt(i) <= '9') {
             result = result * 10 + (str.charAt(i) - '0');
             i++;
@@ -26,7 +26,7 @@ public class AtoI {
         if (flag == '-') {
             result = -result;
         }
-// handle max and min
+        // handle max and min
         if (result > Integer.MAX_VALUE) {
             return Integer.MAX_VALUE;
         }

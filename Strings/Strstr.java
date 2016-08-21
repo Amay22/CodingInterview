@@ -1,8 +1,10 @@
 package Strings;
 
+// Best implementation of substring
+
 public class Strstr {
 
-    public static int strStr(String haystack, String needle) {
+    private static int strStr(String haystack, String needle) {
         if (haystack == null || needle == null) {
             return 0;
         }
@@ -35,9 +37,9 @@ public class Strstr {
         }
         return -1;
     }
-//calculate KMP array
+    //calculate KMP array
 
-    public static int[] getNext(String needle) {
+    private static int[] getNext(String needle) {
         int[] next = new int[needle.length()];
         next[0] = 0;
         for (int i = 1; i < needle.length(); i++) {

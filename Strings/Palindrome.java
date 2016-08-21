@@ -2,7 +2,7 @@ package Strings;
 
 public class Palindrome {
     
-    public static boolean isPalindrome(String pali) {
+    private static boolean isPalindrome(String pali) {
         for (int i = 0; i < pali.length()/2; i++) {
             int difference = Math.abs(pali.charAt(i) - pali.charAt(pali.length()-1-i));
             difference = difference == 32 ? 0 : difference;

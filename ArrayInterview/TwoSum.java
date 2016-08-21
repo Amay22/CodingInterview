@@ -1,15 +1,16 @@
 package ArrayInterview;
 
-
-import java.util.HashMap;
-
-// Question: Given an array of integers, find 
+// Question: Given an array of integers, find
 // two numbers such that they add up to a specific target number.
 // Input: numbers={2, 7, 11, 15}, target=9
 // Output: index1=1, index2=2
+
+
+import java.util.HashMap;
+
 public class TwoSum {
 
-    public static int[] twoSum(int[] numbers, int target) {
+    private static int[] twoSum(int[] numbers, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int[] result = new int[2];
         for (int i = 0; i < numbers.length; i++) {
@@ -26,7 +27,7 @@ public class TwoSum {
     }
 
     //    for sorted array
-    public static int[] twoSum_sorted_array(int[] numbers, int target) {
+    private static int[] twoSum_sorted_array(int[] numbers, int target) {
         if (numbers == null || numbers.length == 0) {
             return null;
         }

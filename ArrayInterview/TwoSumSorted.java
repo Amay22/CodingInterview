@@ -1,8 +1,10 @@
 package ArrayInterview;
 
+// same as TwoSum but for a sorted array.
+
 public class TwoSumSorted {
 
-    public static int[] twoSum(int[] numbers, int target) {
+    private static int[] twoSum(int[] numbers, int target) {
         if (numbers == null || numbers.length == 0) {
             return null;
         }
