@@ -32,7 +32,7 @@ public class MergeSortRecursive {
         }
 
         /* Building the resulting array from the previously sorted sequences */
-        for (int p = llim, m = 0, n = 0, k = llim; k <= hlim; ++k) {
+        for (int m = 0, n = 0, k = llim; k <= hlim; ++k) {
             if (larray[m] <= rarray[n]) {
                 array[k] = larray[m];
                 m++;

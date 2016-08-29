@@ -17,7 +17,7 @@ public class RadixSort {
                 boolean move = arr[i] << shift >= 0;
 
                 // If this is the last bit, negative numbers are actually lower
-                if (shift == 0 ? !move : move) {
+                if ((shift == 0) != move) {
                     tmp[j] = arr[i];
                     j++;
                 } else {

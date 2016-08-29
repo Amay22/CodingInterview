@@ -13,7 +13,7 @@ public class HeapSort {
         }
         return arr;
     }
-    
+
     /* Function to build a heap */
     public static void heapify(int arr[]) {
         N = arr.length - 1;
@@ -48,7 +48,7 @@ public class HeapSort {
     /* Main method */
 
     public static void main(String[] args) {
-        int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+        int[] array = {9, 8, 7, 6, 4, 5, 3, 2, 1, 0};
         int result[] = heapSort(array);
         for (int num : result) {
             System.out.print(num + ",");
